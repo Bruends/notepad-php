@@ -1,0 +1,19 @@
+{
+    "name": "bruno/notepad",
+    "description": "notepad app em php",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Bruno Mendes",
+            "email": "brunomendes962@gmail.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "Models\\": "Classes/Models",
+            "Controllers\\": "Classes/Controllers"
+        }
+    },
+    "require": {}
+
+}
