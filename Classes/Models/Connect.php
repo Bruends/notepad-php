@@ -1,6 +1,6 @@
 <?php 
 namespace Models;
-require 'config.php';
+require __DIR__ . '/../../config.php';
 
 use PDO;
 

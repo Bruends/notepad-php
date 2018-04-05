@@ -32,6 +32,7 @@ if($session->checkLogin()){
       <input type="password" name="pass" required>
       <button>Login</button>
     </form>
+    <!-- messagem de erro  -->
     <?php if(!empty($message)): ?>
       <span><?php echo $message; ?></span>
     <?php endif; ?>
