@@ -34,6 +34,7 @@ if(!$session->checkLogin()){
   </section>
 
   <script src="public/js/jquery.min.js"></script>
-  <script src="public/js/get.js"></script>
+  <script src="public/js/ajax.js"></script>
+  <script src="public/js/main.js"></script>
 </body>
 </html>
