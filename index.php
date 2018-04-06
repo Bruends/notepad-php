@@ -14,11 +14,21 @@
   }
 ?>
 
-  <section>
-    <form action="#" method="post">
-      <input type="email" name="email" required>
-      <input type="password" name="pass" required>
-      <button class="btn btn-sm btn-primary">Login</button>
+  <section class="container py-5">
+    <form class="col-sm-12 col-md-6 offset-md-3 p-5 bg-dark" action="#" method="post">
+      <h2 class="text-white h1 text-center py-3">Login</h2>
+      <!-- campo email -->
+      <div class="form-group">
+        <label for="email" class="text-white">Email</label>
+        <input type="email" class="form-control" id="email" placeholder="exemplo@email.com" name="email">
+      </div>
+      <!-- campo senha -->
+      <div class="form-group">
+        <label for="pass" class="text-white">Senha</label>
+        <input type="password" class="form-control" id="pass" name="pass">
+      </div>
+
+      <button class="col-3 offset-9 btn btn-lg btn-primary">Login</button>
     </form>
     <!-- messagem de erro  -->
     <?php if(!empty($message)): ?>

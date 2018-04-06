@@ -1,45 +1,58 @@
-function getAllNotes(){
+function getAllNotes(success){
   $.ajax({
     url: "controllers/handleRequests.php",
     method: "GET",
-    dataType: "json",     
-  
-  }).done(function(data) {
-    console.log(data);
+    dataType: "json",  
+    success: function(data) {
+      success(data);
+    },
+    fail: function(){
+      showAlert('erro ao carregar notas', 'error');
+    }
   });
 }
 
-function saveNote(text){
+function saveNote(text, success){
   $.ajax({
     url: "controllers/handleRequests.php",
     method: "POST",
-    dataType: "json",     
-    data: { text: text }
-  
-  }).done(function(data) {
-    console.log(data);
+    dataType: "json",
+    data: { text: text },
+    success: function(data) {
+      success(data, 'salvo com sucesso');
+    },
+    fail: function(){
+      showAlert('erro ao salvar nota', 'error');
+    }
   });
 }
 
-function updateNote(noteId, text){
+function updateNote(noteId, text, success){
   $.ajax({
     url: "controllers/handleRequests.php",
     method: "PUT",
     dataType: "json",    
     data: { note_id: noteId, text: text }
 
-  }).done(function(data) {
-    console.log(data);
+  })
+  .success(function(data) {
+    success(data, 'atualizado com sucesso!');
+  })
+  .fail(function(){
+    showAlert('erro ao atualizar nota', 'error');
   });
 }
 
-function deleteNote(noteId){
+function deleteNote(noteId, success){
   $.ajax({
     url: "controllers/handleRequests.php?note_id="+noteId,
     method: "DELETE",
-    dataType: "json", 
-
-  }).done(function(data) {
-    console.log(data);
-  });  
+    dataType: "json",
+  })
+  .success(function(data) {
+    success(data, 'deletado com sucesso!');
+  })
+  .fail(function(){
+    showAlert('erro ao deletar nota', 'error');
+  }); 
 }
