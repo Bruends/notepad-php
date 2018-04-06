@@ -1,4 +1,6 @@
 $(function() {
+  loadNotes();   
   handleSaveSubmit();
-  loadNotes();
+  handleUpdateSubmit();
+  handleDeleteSubmit();
 })

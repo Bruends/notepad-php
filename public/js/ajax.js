@@ -7,7 +7,7 @@ function getAllNotes(success){
       success(data);
     },
     fail: function(){
-      showAlert('erro ao carregar notas', 'error');
+      showAlert('erro ao carregar notas', 'danger');
     }
   });
 }
@@ -22,7 +22,7 @@ function saveNote(text, success){
       success(data, 'salvo com sucesso');
     },
     fail: function(){
-      showAlert('erro ao salvar nota', 'error');
+      showAlert('erro ao salvar nota', 'danger');
     }
   });
 }
@@ -32,14 +32,13 @@ function updateNote(noteId, text, success){
     url: "controllers/handleRequests.php",
     method: "PUT",
     dataType: "json",    
-    data: { note_id: noteId, text: text }
-
-  })
-  .success(function(data) {
-    success(data, 'atualizado com sucesso!');
-  })
-  .fail(function(){
-    showAlert('erro ao atualizar nota', 'error');
+    data: { note_id: noteId, text: text },
+    success: function(data) {
+      success(data, 'Nota alterada com sucesso!');
+    },
+    fail: function(){
+      showAlert('erro ao alterar nota', 'danger');
+    }
   });
 }
 
@@ -48,11 +47,12 @@ function deleteNote(noteId, success){
     url: "controllers/handleRequests.php?note_id="+noteId,
     method: "DELETE",
     dataType: "json",
-  })
-  .success(function(data) {
-    success(data, 'deletado com sucesso!');
-  })
-  .fail(function(){
-    showAlert('erro ao deletar nota', 'error');
-  }); 
+    success: function(data) {
+      console.log(data);
+      success(data, 'Nota deletada com sucesso!');
+    },
+    fail: function(){
+      showAlert('erro ao salvar nota', 'danger');
+    }
+  });
 }

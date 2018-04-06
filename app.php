@@ -24,7 +24,8 @@
   <!-- alerta -->
   <div class="alert" id="alert" role="alert"></div>
 
-  <!-- modal  -->  
+  <!-- modais -->  
   <?php require 'template-parts/editmodal.php'; ?>
+  <?php require 'template-parts/deletemodal.php'; ?>
 
 <?php require 'template-parts/footer.php'; ?>

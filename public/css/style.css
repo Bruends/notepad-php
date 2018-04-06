@@ -1,5 +1,5 @@
 #alert {
-  position: absolute;
+  position: fixed;
   max-width: 400px !important;
   top: 0;
   right: 0;
