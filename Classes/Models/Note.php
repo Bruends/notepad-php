@@ -37,13 +37,19 @@ class Note extends Connect
         
       // prepara e executa a query
       $stmt = $pdo->prepare($sql);
-      $stmt->execute(array(
+      $res = $stmt->execute(array(
         ':text' => $text,
         ':user_id' => $user_id, 
       ));
 
       $pdo = null;
-      return true;
+      
+      if($stmt->rowCount() > 0){
+        return true;
+      } else {
+        return false;
+      }
+
     } catch(PDOException $e) {
       throw $e;
     }
@@ -67,7 +73,12 @@ class Note extends Connect
       ));
 
       $pdo = null;
-      return true;
+
+      if($stmt->rowCount() > 0){
+        return true;
+      } else {
+        return false;
+      }
     } catch(PDOException $e) {
       throw $e;
     }
@@ -87,9 +98,14 @@ class Note extends Connect
         ':note_id' => $note_id,
         ':user_id' => $user_id, 
       ));
-
+      
       $pdo = null;
-      return true;
+
+      if($stmt->rowCount() > 0){
+        return true;
+      } else {
+        return false;
+      }
     } catch(PDOException $e) {
       throw $e;
     }

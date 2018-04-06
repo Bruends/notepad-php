@@ -47,7 +47,8 @@ function cardButtonslisteners(){
 function showAlert(msg, type){
   var alert = $('#alert');
   alert.html(msg);
-  alert.addClass(`alert-${type}`);
+  alert.removeClass();
+  alert.addClass(`alert alert-${type}`);
   alert.addClass('show');
   
   setTimeout(function() {
