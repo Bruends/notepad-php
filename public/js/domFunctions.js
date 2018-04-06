@@ -4,9 +4,9 @@ function createNotesCards(notesArray){
   for(var i = 0; i < notesArray.length; i++){
     var id = notesArray[i].id;   
     var text = notesArray[i].text;   
-    notesCards += '<div class="card col-md-3 my-1 mx-1 col-sm-10">'
+    notesCards += '<div class="card col-md-3 my-1 mx-1">'
       + '<div class="card-body">'
-      +  '<p class="card-text" id="note-' + id + '">'
+      +  '<p class="lead card-text" id="note-' + id + '">'
       +     text
       +  '</p>'
       +  '<a href="#" class="card-link link-update" data-toggle="modal" data-target="#edit-modal" id="update-'+ id + '">'
