@@ -31,7 +31,8 @@ if (isset($_SERVER['REQUEST_METHOD'])){
 
     case 'PUT':
       // Criando variavel $_PUT com os parametros do body da request
-      parse_str(file_get_contents('php://input'), $_PUT); 
+      parse_str(file_get_contents('php://input'), $_PUT);
+
       if(isset($_PUT["text"]) && isset($_PUT["note_id"])){
         echo NoteController::update($_PUT["text"], $_PUT["note_id"], $user_id);
       } else {
@@ -41,10 +42,7 @@ if (isset($_SERVER['REQUEST_METHOD'])){
 
     case 'DELETE':
       // pegando parametros da url
-      $url = $_SERVER['REQUEST_URI'];
-      $params = [];
-      $parts = parse_url($url);
-      parse_str($parts['query'], $params);
+      parse_str($_SERVER['QUERY_STRING'], $params);
       
       if(isset($params["note_id"])) {
         echo NoteController::delete($params["note_id"], $user_id);
