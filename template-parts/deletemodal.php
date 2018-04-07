@@ -7,11 +7,9 @@
           <span aria-hidden="true">&times;</span>
         </button>
       </div>
-      <form action="#" id="delete-form">
-        <div class="modal-body">
-          <div class="form-group">
-          <input type="hidden" id="delete-id"> 
-        </div>
+      <form action="#" id="delete-form">        
+        <div class="form-group">
+        <input type="hidden" id="delete-id">        
         <div class="modal-footer">
           <button class="btn btn-danger">
             Apagar

@@ -10,10 +10,10 @@ function createNotesCards(notesArray){
       +     text
       +  '</p>'
       +  '<a href="#" class="card-link link-update" data-toggle="modal" data-target="#edit-modal" id="update-'+ id + '">'
-      +     '<i class="fa fa-pencil"></i>'
+      +     '<i class="text-info fa fa-pencil"></i>'
       +  '</a>'
       +  '<a href="#" class="card-link link-delete" data-toggle="modal" data-target="#delete-modal" id="delete-'+ id + '">'
-      +     '<i class="fa fa-trash"></i>'
+      +     '<i class="text-info fa fa-trash"></i>'
       +  '</a>'
       + '</div>'
     +'</div>'

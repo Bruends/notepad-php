@@ -15,7 +15,7 @@
 ?>
 
   <section class="container py-5">
-    <form class="col-sm-12 col-md-6 offset-md-3 p-5 bg-dark" action="#" method="post">
+    <form class="col-sm-12 col-md-6 offset-md-3 p-5 bg-primary" action="#" method="post">
       <h2 class="text-white h1 text-center py-3">Login</h2>
       <!-- campo email -->
       <div class="form-group">
@@ -28,12 +28,14 @@
         <input type="password" class="form-control" id="pass" name="pass">
       </div>
 
-      <button class="col-3 offset-9 btn btn-lg btn-primary">Login</button>
+      <!-- messagem de erro  -->
+      <?php if(!empty($message)): ?>
+        <span class="text-center d-block alert alert-danger w-100"><?php echo $message; ?></span>
+      <?php endif; ?>
+
+      <button class="d-block my-2 ml-auto btn btn-lg btn-info">Login</button>
     </form>
-    <!-- messagem de erro  -->
-    <?php if(!empty($message)): ?>
-      <span><?php echo $message; ?></span>
-    <?php endif; ?>
+    
   </section>
 
 <?php require_once 'template-parts/footer.php'; ?>
