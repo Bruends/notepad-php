@@ -48,11 +48,10 @@ function showAlert(msg, type){
   var alert = $('#alert');
   alert.html(msg);
   alert.removeClass();
-  alert.addClass(`alert alert-${type}`);
-  alert.addClass('show');
+  alert.addClass(`alert alert-${type}`);  
+  alert.show();
   
-  setTimeout(function() {
-    alert.removeClass('show'); 
-    alert.addClass('fade'); 
+  setTimeout(function() {     
+    alert.hide();
   }, 1500);
 }

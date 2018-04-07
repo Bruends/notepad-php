@@ -32,8 +32,11 @@
       <?php if(!empty($message)): ?>
         <span class="text-center d-block alert alert-danger w-100"><?php echo $message; ?></span>
       <?php endif; ?>
-
-      <button class="d-block my-2 ml-auto btn btn-lg btn-info">Login</button>
+      
+      <div class="row justify-content-between">
+        <a href="register.php" class="d-block col text-white">registrar</a>
+        <button class="btn btn-lg btn-info">Login</button>
+      </div>
     </form>
     
   </section>

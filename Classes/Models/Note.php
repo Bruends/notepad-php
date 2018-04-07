@@ -12,7 +12,7 @@ class Note extends Connect
       $pdo = parent::connect();
 
       $sql = 'SELECT id, text, user_id 
-              FROM notes; 
+              FROM notes
               WHERE user_id = :user_id';
         
       // prepara e executa a query

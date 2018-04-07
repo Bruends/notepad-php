@@ -8,10 +8,13 @@
   // só permite acesso à essa página se logado
   if(!$session->checkLogin()){
     header('location: index.php');
+    exit();
   }
 ?>
 
-  <a href="app.php?logout=true" class="logout-link">Logout</a>
+  <div class="logout-link">
+    <a href="app.php?logout=true">Logout</a>
+  </div>
 
   <!-- Form nova nota -->
   <section class="container py-5">
