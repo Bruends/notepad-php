@@ -17,10 +17,10 @@
 - Javascript (es5)
 
 
-##### instalação
+#### instalação
 - Clone o repositório
 - Abra a pasta do projeto no terminal e digite o comando `composer dump-autoload` para atualizar o carregamento das classes
-- crie uma tabela no MySQL e execute os comandos no arquivo `dump.sql` 
+- execute os comandos no arquivo `dump.sql` 
 - altere as constantes do arquivo `config.php` com as configurações do seu mysql
 - mova a pasta para um servidor ex: apache e abra a url do servidor escolhido no browser
 
