@@ -1,16 +1,10 @@
 #alert {
   position: fixed;
   max-width: 400px !important;
-  top: 0;
+  bottom: 0;
   right: 0;
   text-align: center;
   padding: 20px 50px;
-}
-
-body {
-  outline: 2px solid #18BC9C;
-  outline-offset: -1vw;
-  min-height: 100vh;
 }
 
 .card {
